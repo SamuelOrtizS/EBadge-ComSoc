@@ -38,6 +38,28 @@
 +-------------------------------------------------------------------+  <-- 70 mm
 ```
 
+### Vista Frontal Escarapela Presentador
+
+```text
++-------------------------------------------------------------------+  <-- 100 mm
+|                                                                   |
+|   +-----------------------------------------------------------+   |
+|   |                                                           |   |
+|   |                PANTALLA e-PAPER 2.9" SPI                  |   |  ~38 mm
+|   |                    (296 x 128 px)                         |   |
+|   |                                                           |   |
+|   +-----------------------------------------------------------+   |
+|                                                                   |
+|   [LED 1]                   [LED 2]                   [LED 3]     |  ~8 mm
+|  (Neopixel)                (Neopixel)                (Neopixel)   |
+|                                                                   |
+|  +------------+   [BTN 1]   [BTN 2]   [BTN 3]   +-----+  +-----+  |
+|  | ESP32-C3   |   ( ID )   (STATE)   ( SEND )   |SW-ON|  |TP4056|  |  ~24 mm
+|  | SuperMini  |   [ O ]     [ O ]     [ O ]     |[OFF]|  |USB-C|==| <-- Puerto USB
+|  +------------+                                 +-----+  +-----+  |
++-------------------------------------------------------------------+  <-- 70 mm
+```
+
 ### Vista Posterior (Bottom Layer)
 
 ```text
@@ -66,17 +88,20 @@
 |Alimentación|Interruptor Deslizante SPDT + Conector JST-PH 2.0|1|
 |Soporte|PCB Personalizada (100 mm x 70 mm) + Carcasa 3D (PLA)|1|
 
-## 📌 Asignación de Pines (Pinout Sugerido)
+## 📌 Asignación Completa de Pines (Pinout)
 
-|Periférico|Pin e-Paper / Neopixel|Pin ESP32-C3|
-|----------|----------------------|------------|
-|e-Paper 2.9"|SPI BUSY|GPIO 3|
-|-|SPI RST|GPIO 4|
-|-|SPI DC|GPIO 5|
-|-|SPI CS|GPIO 6|
-|-|SPI CLK (SCK)|GPIO 8|
-|-|SPI DIN (MOSI)|GPIO 10|
-|Neopixels (x3)|DATA IN|GPIO 2|
+| Periférico | Función / Pin | Pin ESP32-C3 |
+| :--- | :--- | :--- |
+| **e-Paper 2.9"** | SPI BUSY | GPIO 3 |
+| | SPI RST | GPIO 4 |
+| | SPI DC | GPIO 5 |
+| | SPI CS | GPIO 6 |
+| | SPI CLK (SCK) | GPIO 8 |
+| | SPI DIN (MOSI) | GPIO 10 |
+| **Neopixels (x3)** | DATA IN | GPIO 2 |
+| **Botón 1 (Maestro)** | BTN_ID (Seleccionar Orador 1-4 / Broadcast) | GPIO 0 |
+| **Botón 2 (Maestro)** | BTN_STATE (Seleccionar Estado / Color) | GPIO 1 |
+| **Botón 3 (Maestro)** | BTN_SEND (Confirmar y Transmitir ESP-NOW) | GPIO 7 |
 
 ## 💻 Arquitectura de Software e Instalación
 
@@ -124,8 +149,9 @@ typedef struct struct_mensaje {
 | **LEDs RGB Neopixel** | Tira / Módulo WS2812B (3 LEDs por placa) | 5 | $5,000 | $25,000 | $6.25 |
 | **Batería LiPo 3.7V** | Capacidad 500 mAh (35x30x5 mm) | 5 | $16,000 | $80,000 | $20.00 |
 | **Cargador TP4056** | Módulo de carga con protección USB-C | 5 | $4,000 | $20,000 | $5.00 |
+| **Pulsadores Táctiles** | Push-button 6x6 mm SMD (3 por placa) | 5 | $1,500 | $7,500 | $2.00 |
 | **Control & Conexión** | Interruptor SPDT + Conector JST + Cables | 5 | $4,000 | $20,000 | $5.00 |
 | **Fabricación PCB** | Lote mínimo de 5 PCBs (100x70 mm, 2 capas) | 1 | $20,000 | $20,000 | $5.00 |
 | **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $20.00 |
 | **Carcasa 3D & Agarre** | Impresión 3D en PLA + Clip de fijación / Imán | 5 | $10,000 | $50,000 | $12.50 |
-| **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$635,000** | **$158.75** |
+| **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$642,500** | **$160.75** |
