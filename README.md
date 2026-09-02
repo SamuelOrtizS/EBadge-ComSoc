@@ -114,3 +114,20 @@ typedef struct struct_mensaje {
   uint8_t estado_led;     // 0: Standby, 1: Hablando (Verde), 2: Alerta (Amarillo), 3: Fin (Rojo)
 } struct_mensaje;
 ```
+
+### 📊 Presupuesto Estimado — E-Badge ComSoc (5 Unidades)
+
+| Componente / Concepto | Especificación | Cant. | Costo Unit. (COP) | Costo Total (COP) | Costo Total (USD) |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **ESP32-C3 SuperMini** | RISC-V 32-bit, WiFi + BLE5, USB-C | 5 | $20,000 | $100,000 | $25.00 |
+| **Pantalla e-Paper 2.9"** | Resolución 296x128 px, interfaz SPI | 5 | $48,000 | $240,000 | $60.00 |
+| **LEDs RGB Neopixel** | Tira / Módulo WS2812B (3 LEDs por placa) | 5 | $5,000 | $25,000 | $6.25 |
+| **Batería LiPo 3.7V** | Capacidad 500 mAh (35x30x5 mm) | 5 | $16,000 | $80,000 | $20.00 |
+| **Cargador TP4056** | Módulo de carga con protección USB-C | 5 | $4,000 | $20,000 | $5.00 |
+| **Control & Conexión** | Interruptor SPDT + Conector JST + Cables | 5 | $4,000 | $20,000 | $5.00 |
+| **Fabricación PCB** | Lote mínimo de 5 PCBs (100x70 mm, 2 capas) | 1 | $20,000 | $20,000 | $5.00 |
+| **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $20.00 |
+| **Carcasa 3D & Agarre** | Impresión 3D en PLA + Clip de fijación / Imán | 5 | $10,000 | $50,000 | $12.50 |
+| **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$635,000** | **$158.75** |
+
+> **Nota de Patrocinio Académico:** En caso de aprobarse la esponsorización de las PCBs (JLCPCB / PCBWay / etc.), el costo total se reduce a **~$535,000 COP (~$133.75 USD)**, dejando cada unidad en **~$107,000 COP (~$26.75 USD)**.
