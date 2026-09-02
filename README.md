@@ -129,5 +129,3 @@ typedef struct struct_mensaje {
 | **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $20.00 |
 | **Carcasa 3D & Agarre** | Impresión 3D en PLA + Clip de fijación / Imán | 5 | $10,000 | $50,000 | $12.50 |
 | **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$635,000** | **$158.75** |
-
-> **Nota de Patrocinio Académico:** En caso de aprobarse la esponsorización de las PCBs (JLCPCB / PCBWay / etc.), el costo total se reduce a **~$535,000 COP (~$133.75 USD)**, dejando cada unidad en **~$107,000 COP (~$26.75 USD)**.
