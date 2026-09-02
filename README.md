@@ -150,7 +150,7 @@ typedef struct struct_mensaje {
 | **LEDs RGB Neopixel** | Tira / Módulo WS2812B (3 LEDs por placa) | 5 | $5,000 | $25,000 | $6.25 |
 | **Batería LiPo 3.7V** | Capacidad 500 mAh (35x30x5 mm) | 5 | $16,000 | $80,000 | $20.00 |
 | **Cargador TP4056** | Módulo de carga con protección USB-C | 5 | $4,000 | $20,000 | $5.00 |
-| **Pulsadores Táctiles** | Push-button 6x6 mm SMD (3 por placa) | 5 | $1,500 | $7,500 | $2.00 |
+| **Pulsadores Táctiles** | Push-button 6x6 mm SMD | 3 | $1,500 | $7,500 | $2.00 |
 | **Control & Conexión** | Interruptor SPDT + Conector JST + Cables | 5 | $4,000 | $20,000 | $5.00 |
 | **Fabricación PCB** | Lote mínimo de 5 PCBs (100x70 mm, 2 capas) | 1 | $20,000 | $20,000 | $5.00 |
 | **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $20.00 |
