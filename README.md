@@ -145,14 +145,14 @@ typedef struct struct_mensaje {
 
 | Componente / Concepto | Especificación | Cant. | Costo Unit. (COP) | Costo Total (COP) | Costo Total (USD) |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **ESP32-C3 SuperMini** | RISC-V 32-bit, WiFi + BLE5, USB-C | 5 | $20,000 | $100,000 | $25.00 |
-| **Pantalla e-Paper 2.9"** | Resolución 296x128 px, interfaz SPI | 5 | $48,000 | $240,000 | $60.00 |
-| **LEDs RGB Neopixel** | Tira / Módulo WS2812B (3 LEDs por placa) | 5 | $5,000 | $25,000 | $6.25 |
-| **Batería LiPo 3.7V** | Capacidad 500 mAh (35x30x5 mm) | 5 | $16,000 | $80,000 | $20.00 |
-| **Cargador TP4056** | Módulo de carga con protección USB-C | 5 | $4,000 | $20,000 | $5.00 |
-| **Pulsadores Táctiles** | Push-button 6x6 mm SMD | 3 | $1,500 | $7,500 | $2.00 |
-| **Control & Conexión** | Interruptor SPDT + Conector JST + Cables | 5 | $4,000 | $20,000 | $5.00 |
-| **Fabricación PCB** | Lote mínimo de 5 PCBs (100x70 mm, 2 capas) | 1 | $20,000 | $20,000 | $5.00 |
-| **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $20.00 |
-| **Carcasa 3D & Agarre** | Impresión 3D en PLA + Clip de fijación / Imán | 5 | $10,000 | $50,000 | $12.50 |
-| **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$642,500** | **$160.75** |
+| **ESP32-C3 SuperMini** | RISC-V 32-bit, WiFi + BLE5, USB-C | 5 | $20,000 | $100,000 | $31.70 |
+| **Pantalla e-Paper 2.9"** | Resolución 296x128 px, interfaz SPI | 5 | $48,000 | $240,000 | $76.09 |
+| **LEDs RGB Neopixel** | Tira / Módulo WS2812B (3 LEDs por placa) | 5 | $5,000 | $25,000 | $7.93 |
+| **Batería LiPo 3.7V** | Capacidad 500 mAh (35x30x5 mm) | 5 | $16,000 | $80,000 | $25.36 |
+| **Cargador TP4056** | Módulo de carga con protección USB-C | 5 | $4,000 | $20,000 | $6.34 |
+| **Pulsadores Táctiles** | Push-button 6x6 mm SMD | 3 | $1,500 | $7,500 | $2.38 |
+| **Control & Conexión** | Interruptor SPDT + Conector JST + Cables | 5 | $4,000 | $20,000 | $6.34 |
+| **Fabricación PCB** | Lote mínimo de 5 PCBs (100x70 mm, 2 capas) | 1 | $20,000 | $20,000 | $6.34 |
+| **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $25.36 |
+| **Carcasa 3D & Agarre** | Impresión 3D en PLA + Clip de fijación / Imán | 5 | $10,000 | $50,000 | $15.85 |
+| **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$642,500** | **$203.67** |
