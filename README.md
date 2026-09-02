@@ -87,6 +87,7 @@
 |Cargador|Módulo TP4056 USB-C con protección|1|
 |Alimentación|Interruptor Deslizante SPDT + Conector JST-PH 2.0|1|
 |Soporte|PCB Personalizada (100 mm x 70 mm) + Carcasa 3D (PLA)|1|
+|Pulsadores Táctiles (Opcional)|Push-button 6x6 mm SMD|3|
 
 ## 📌 Asignación Completa de Pines (Pinout)
 
