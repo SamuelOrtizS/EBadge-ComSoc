@@ -38,6 +38,28 @@
 +-------------------------------------------------------------------+  <-- 70 mm
 ```
 
+### Vista Frontal Escarapela Presentador
+
+```text
++-------------------------------------------------------------------+  <-- 100 mm
+|                                                                   |
+|   +-----------------------------------------------------------+   |
+|   |                                                           |   |
+|   |                PANTALLA e-PAPER 2.9" SPI                  |   |  ~38 mm
+|   |                    (296 x 128 px)                         |   |
+|   |                                                           |   |
+|   +-----------------------------------------------------------+   |
+|                                                                   |
+|   [LED 1]                   [LED 2]                   [LED 3]     |  ~8 mm
+|  (Neopixel)                (Neopixel)                (Neopixel)   |
+|                                                                   |
+|  +------------+   [BTN 1]   [BTN 2]   [BTN 3]   +-----+  +-----+  |
+|  | ESP32-C3   |   ( ID )   (STATE)   ( SEND )   |SW-ON|  |TP4056|  |  ~24 mm
+|  | SuperMini  |   [ O ]     [ O ]     [ O ]     |[OFF]|  |USB-C|==| <-- Puerto USB
+|  +------------+                                 +-----+  +-----+  |
++-------------------------------------------------------------------+  <-- 70 mm
+```
+
 ### Vista Posterior (Bottom Layer)
 
 ```text
@@ -65,18 +87,22 @@
 |Cargador|Módulo TP4056 USB-C con protección|1|
 |Alimentación|Interruptor Deslizante SPDT + Conector JST-PH 2.0|1|
 |Soporte|PCB Personalizada (100 mm x 70 mm) + Carcasa 3D (PLA)|1|
+|Pulsadores Táctiles (Opcional)|Push-button 6x6 mm SMD|3|
 
-## 📌 Asignación de Pines (Pinout Sugerido)
+## 📌 Asignación Completa de Pines (Pinout)
 
-|Periférico|Pin e-Paper / Neopixel|Pin ESP32-C3|
-|----------|----------------------|------------|
-|e-Paper 2.9"|SPI BUSY|GPIO 3|
-|-|SPI RST|GPIO 4|
-|-|SPI DC|GPIO 5|
-|-|SPI CS|GPIO 6|
-|-|SPI CLK (SCK)|GPIO 8|
-|-|SPI DIN (MOSI)|GPIO 10|
-|Neopixels (x3)|DATA IN|GPIO 2|
+| Periférico | Función / Pin | Pin ESP32-C3 |
+| :--- | :--- | :--- |
+| **e-Paper 2.9"** | SPI BUSY | GPIO 3 |
+| | SPI RST | GPIO 4 |
+| | SPI DC | GPIO 5 |
+| | SPI CS | GPIO 6 |
+| | SPI CLK (SCK) | GPIO 8 |
+| | SPI DIN (MOSI) | GPIO 10 |
+| **Neopixels (x3)** | DATA IN | GPIO 2 |
+| **Botón 1 (Maestro)** | BTN_ID (Seleccionar Orador 1-4 / Broadcast) | GPIO 0 |
+| **Botón 2 (Maestro)** | BTN_STATE (Seleccionar Estado / Color) | GPIO 1 |
+| **Botón 3 (Maestro)** | BTN_SEND (Confirmar y Transmitir ESP-NOW) | GPIO 7 |
 
 ## 💻 Arquitectura de Software e Instalación
 
@@ -114,3 +140,19 @@ typedef struct struct_mensaje {
   uint8_t estado_led;     // 0: Standby, 1: Hablando (Verde), 2: Alerta (Amarillo), 3: Fin (Rojo)
 } struct_mensaje;
 ```
+
+### 📊 Presupuesto Estimado — E-Badge ComSoc (5 Unidades)
+
+| Componente / Concepto | Especificación | Cant. | Costo Unit. (COP) | Costo Total (COP) | Costo Total (USD) |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **ESP32-C3 SuperMini** | RISC-V 32-bit, WiFi + BLE5, USB-C | 5 | $20,000 | $100,000 | $31.70 |
+| **Pantalla e-Paper 2.9"** | Resolución 296x128 px, interfaz SPI | 5 | $48,000 | $240,000 | $76.09 |
+| **LEDs RGB Neopixel** | Tira / Módulo WS2812B (3 LEDs por placa) | 5 | $5,000 | $25,000 | $7.93 |
+| **Batería LiPo 3.7V** | Capacidad 500 mAh (35x30x5 mm) | 5 | $16,000 | $80,000 | $25.36 |
+| **Cargador TP4056** | Módulo de carga con protección USB-C | 5 | $4,000 | $20,000 | $6.34 |
+| **Pulsadores Táctiles** | Push-button 6x6 mm SMD | 3 | $1,500 | $7,500 | $2.38 |
+| **Control & Conexión** | Interruptor SPDT + Conector JST + Cables | 5 | $4,000 | $20,000 | $6.34 |
+| **Fabricación PCB** | Lote mínimo de 5 PCBs (100x70 mm, 2 capas) | 1 | $20,000 | $20,000 | $6.34 |
+| **Envío PCB Express** | Envío internacional (DHL / FedEx / Express) | 1 | $80,000 | $80,000 | $25.36 |
+| **Carcasa 3D & Agarre** | Impresión 3D en PLA + Clip de fijación / Imán | 5 | $10,000 | $50,000 | $15.85 |
+| **TOTAL PROYECTO** | **Lote completo de 5 escarapelas terminadas** | **—** | **—** | **$642,500** | **$203.67** |
